@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { flushSync } from "react-dom";
 import { installFileIcons } from "../../client/web";
 
-// This models TreeRowItem and TreeChevron shared by Paseo v0.12.0 and v0.13.0.
+// This models TreeRowItem and TreeChevron shared by Paseo v0.11.0 through v0.13.0.
 // React owns the original children, exercising reconciliation rather than only static HTML.
 const root = createRoot(document.querySelector("#root")!);
 let entries = [];

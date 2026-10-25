@@ -17,7 +17,7 @@ The plugin keeps Paseo's native folder arrows, file opening, context menus, drag
 
 ## Install
 
-Requires **Paseo 0.12.x or 0.13.x** on both the daemon and desktop/web client. Native iOS and Android clients retain their original icons.
+Requires **Paseo 0.11.0 or later** on both the daemon and desktop/web client. Native iOS and Android clients retain their original icons.
 
 Enable plugins under **Settings → Plugins**, then run this command on the machine hosting the daemon that your client connects to:
 
@@ -45,7 +45,7 @@ For a local Windows daemon, use a Windows path, for example `paseo plugin instal
 
 ## Compatibility and behavior
 
-Paseo 0.12.x and 0.13.x have no file icon theme registration API. This community plugin uses a desktop/web DOM adapter and preserves React-owned elements. It depends on the native tree's `file-explorer-tree-scroll`, `file-explorer-row-*`, and `TreeChevron` structure. The file tree, icon and chevron components are unchanged between Paseo v0.12.0 and v0.13.0. Later Paseo releases need compatibility verification.
+Paseo 0.11.x through 0.13.x have no file icon theme registration API. This community plugin uses a desktop/web DOM adapter and preserves React-owned elements. It depends on the native tree's `file-explorer-tree-scroll`, `file-explorer-row-*`, and `TreeChevron` structure. The file tree, icon and chevron components are identical in Paseo v0.11.0, v0.12.0 and v0.13.0. The supported version range has no upper bound, so a host upgrade does not automatically disable the plugin. Changes to the native tree may require a plugin update. The 0.11.0 minimum is required by the manifest's `name` and `media` fields.
 
 Rows whose expected structure cannot be recognized are left alone, and loading folders retain their native spinner. Disabling the last loaded instance restores the original artwork. Multiple installations connected to the same client share one adapter.
 
@@ -76,7 +76,7 @@ npm run test:browser
 
 On Linux, use `npx playwright install --with-deps chromium` if the required browser system libraries are missing.
 
-The browser checks use a React fixture based on the native file tree shared by Paseo v0.12.0 and v0.13.0. They cover spacing, folder expansion, row reuse, editing, theme changes, native events, and cleanup. Fixture checks do not replace testing in the Paseo desktop app.
+The browser checks use a React fixture based on the native file tree shared by Paseo v0.11.0, v0.12.0 and v0.13.0. They cover spacing, folder expansion, row reuse, editing, theme changes, native events, and cleanup. Fixture checks do not replace testing in the Paseo desktop app.
 
 After editing an installed local checkout, run:
 

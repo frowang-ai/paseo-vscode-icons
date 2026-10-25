@@ -118,7 +118,7 @@ function lightTheme(label: DomElement): boolean {
 function folderState(slot: DomElement): boolean | null {
   const wrapper = slot.firstElementChild;
   if (!wrapper || wrapper.tagName.toLowerCase() === "svg") return null;
-  // TreeChevron in Paseo 0.12.x and 0.13.x is a ChevronRight inside a rotated View.
+  // TreeChevron in Paseo 0.11.x through 0.13.x is a ChevronRight inside a rotated View.
   const path = wrapper.querySelector("svg path, svg polyline");
   const d = path?.getAttribute("d")?.replace(/[\s,]+/g, " ").trim();
   const points = path?.getAttribute("points")?.replace(/[\s,]+/g, " ").trim();

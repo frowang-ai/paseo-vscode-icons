@@ -3,5 +3,5 @@
   "name": "VSCode Icons",
   "description": "Colorful file and folder icons in Paseo's existing Files explorer.",
   "media": ["assets/preview.png"],
-  "requirements": { "paseo": ">=0.12.0 <0.14.0" }
+  "requirements": { "paseo": ">=0.11.0" }
 }
